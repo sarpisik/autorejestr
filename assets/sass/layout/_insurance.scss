@@ -1,11 +1,36 @@
 #ubezpieczenia {
-    .logos {
-        @include flexgrid(
-            (
-              columns: 3,
-              gutters: 3rem,
-              vertical-align: stretch
-            )
-          );
+  .logos {
+    @include flexgrid(
+      (
+        columns: 3,
+        gutters: 3rem,
+        vertical-align: stretch
+      )
+    );
+
+    .content {
+      header {
+        .icon-wrapper {
+          .icon {
+            display: block;
+            margin: auto;
+          }
+        }
+      }
     }
+
+    @include breakpoint("<=medium") {
+      @include flexgrid-resize(
+        (
+          columns: 1,
+          gutters: 2rem,
+          prev-columns: 3
+        )
+      );
+
+      .content {
+        padding: 2rem;
+      }
+    }
+  }
 }
