@@ -1,0 +1,43 @@
+/* CTA */
+
+#rejestracja-pojazdow {
+  @include color(accent1);
+  background-attachment: fixed;
+  background-image: linear-gradient(
+      transparentize(_palette(accent1, bg), 0.75),
+      transparentize(_palette(accent1, bg), 0.75)
+    ),
+    url(../../images/cars-banner.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+
+  .inner {
+    position: relative;
+    z-index: 3;
+
+    > ul > li {
+      color:_palette(accent1, bg);
+      font-size: _size(element-margin);
+      font-weight: _font(weight-bold);
+      list-style: none;
+    }
+  }
+
+  &:after {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  @include breakpoint("<=medium") {
+    background-attachment: scroll;
+  }
+}

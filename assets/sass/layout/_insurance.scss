@@ -1,0 +1,11 @@
+#ubezpieczenia {
+    .logos {
+        @include flexgrid(
+            (
+              columns: 3,
+              gutters: 3rem,
+              vertical-align: stretch
+            )
+          );
+    }
+}

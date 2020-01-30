@@ -1,0 +1,10 @@
+#dlaczego-my {
+    .inner {
+        header {
+            h2 {
+                color: _palette(accent1, bg);
+                font-weight: _font(weight-bold)
+            }
+        }
+    }
+}
