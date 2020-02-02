@@ -53,7 +53,6 @@
           1200,
           function() {
             window.location.hash = locationHash;
-            // window.location.href=locationHash
           }
         );
       }
@@ -63,27 +62,14 @@
   function toggleMenu(element) {
     return function(event) {
       event.preventDefault();
-      // console.log("click");
-
       element.toggleClass("is-menu-visible");
     };
   }
 
-  // $("#menu")
-  //   .append('<a href="#menu" class="close"></a>')
-  //   .appendTo($body)
-  //   .panel({
-  //     target: $body,
-  //     visibleClass: "is-menu-visible",
-  //     delay: 500,
-  //     hideOnClick: true,
-  //     hideOnSwipe: true,
-  //     resetScroll: true,
-  //     resetForms: true,
-  //     side: "right"
-  //   });
-
   var copyright = document.querySelector(".copyright");
   var text = copyright.innerHTML;
-  copyright.innerHTML = text + new Date().getFullYear() + " Autorejestr";
+  copyright.innerHTML =
+    text +
+    new Date().getFullYear() +
+    " Autorejestr. Made with &#10084; by Coala Web Studio";
 })(jQuery);

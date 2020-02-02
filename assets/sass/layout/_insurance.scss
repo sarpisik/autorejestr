@@ -11,9 +11,12 @@
     .content {
       header {
         .icon-wrapper {
+          height: 6rem;
           .icon {
             display: block;
             margin: auto;
+            height: 100%;
+            max-width: 100%;
           }
         }
       }
